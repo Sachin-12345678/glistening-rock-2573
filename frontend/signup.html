@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <style>
+        body{
+            background-color: darkslategrey;
+        }
+        #container{
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          border: 1px solid white;
+          height: 530px;
+          width: 27%;
+          margin: auto;
+          margin-top: 40px;
+          border-radius: 15px;
+          background-color: white;
+        }
+        #container>h1{
+            text-align: center;
+        }
+        #container>input{
+            margin: auto;
+            display: block;
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+        }
+        #container>button{
+            margin: auto;
+            display: block;
+            width: 85%;
+            padding: 9px;
+            border-radius: 5px;
+            font-size: 18px;
+            background-color: #8230c6;
+            color: white;
+            cursor: pointer;
+        }
+        #container>p{
+            text-align: center;
+            margin-top: -10px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .box{
+            height: 45px;
+            margin-top: 20px;
+            display: flex;
+         }
+         .box>div{
+            border: 1px solid black;
+            width: 100%;
+            background-color: #c829e4;
+            color: white;
+         }
+         .box>div>a{
+            font-size: 25px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 0px;
+            margin-left: 50px;
+         }
+         h2{
+            margin-top: 30px;
+            text-align: center;
+         }
+         hr{
+            margin-top: 40px;
+         }
+         h3{
+            text-align: center;
+            font-size: 20px;
+
+         }
+         span{
+            color: red;
+         }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Create a new account</h1>
+        <p>Create an account to continue enjoying uninterrupted video and personalised experience</p>
+        <input type="text" id="email" placeholder="Enter your email...">
+        <br>
+        <input type="password" id="pass" placeholder="password...">
+        <br>
+        <button onclick="onSignup()">Create account</button>
+        <hr>
+        
+        <h2>Create Account With</h2>
+        <div class="box">
+            <div>
+                <a href="https://loginservice.thehut.net/facebook?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Facebook</a>
+            </div>
+            <div>
+                <a href="https://loginservice.thehut.net/google?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Google</a>
+            </div>
+        </div>
+        <h3>Already registered ?<a href="./login.html"><span> Login</span></a></h3>
+    </div>
+</body>
+</html>
+
+<script>
+    const onSignup=()=>{
+        const payload={
+        email:document.getElementById("email").value,
+        pass:document.getElementById("pass").value
+
+        }
+        fetch("https://perfect-blue-gilet.cyclic.app/users/register",{
+            
+        // fetch("http://localhost:8080/users/register",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body: JSON.stringify(payload)
+        }).then(res=>res.json())
+        .then(res=>alert("Signup Successfull"))
+        .then(err=>console.log(err))
+    }
+</script>
