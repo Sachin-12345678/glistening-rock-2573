@@ -91,9 +91,9 @@
     #container{
         width: 100%;
         height: auto;
-        margin-top: 73px;
+        margin-top: -17px;
     }
-    #container>div>img{
+    #container>div>a>img{
         width: 100%;
     }
     .img1{
@@ -108,7 +108,7 @@
     h2{
       margin-top: 30px;
       margin-left: 32px;
-      font-size: 30px;
+      font-size: 25px;
       color: white;
     }
 
@@ -204,6 +204,8 @@
     transform: scale(1.1);
         z-index: 1;
         border: 7px solid white;
+        border-radius: 15px;
+
 }
 
 .slide img {
@@ -237,12 +239,66 @@
   right: 0;
 }
 
-#container2{
-  border: 1px solid red;
-  width: 100%;
-  height: 500px;
-}
+      #container3{
+            width: 95%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            gap: 22px;
+            margin-top: 30px;
+        }
+        #conatiner3>div{
+            width: 20%;
+            justify-content: space-between;
+            cursor: pointer;
+       }
+       #container3>div:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+        border-radius: 15px;
 
+       }
+        #conatiner3>div>img{
+            width: 120%;
+            border-radius: 10px;
+        }
+
+        #latest{
+          width: 95%;
+          height: 150px;
+          margin: auto;
+          display: grid;
+          margin-top: 30px;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 15px;
+        }
+
+        #latest>a>div:hover{
+          transform: scale(1.1);
+          z-index: 1;
+          border: 7px solid white;
+          border-radius: 15px;
+        }
+      
+        #latest>a>div>img{
+          width: 100%;
+          height: 150px;
+        }
+
+        h4{
+          color: white;
+          font-size: 16px;
+          margin-top: 8px;
+          text-decoration: none;
+        }
+
+        .h{
+          margin-top: 90px;
+        }
+        .h2{
+          margin-top: 90px;
+        }
 
     
 </style>
@@ -286,7 +342,7 @@
       <!-- *************Home page start************* -->
      <div id="container">
        <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/cover/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt="">
+            <a href="https://youtu.be/4eOU0Fa1QU4"><img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/cover/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt=""></a>
         </div>
         <div class="img1">
             <div>
@@ -295,28 +351,29 @@
         </div>
         <h2>Trending Near You</h2>
 
-        <div id="container1">
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/portrait/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt="">
-           </div>
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg" alt="">
-           </div>
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5310540/portrait/1920x770e56cf862be8f4c39a93277ffd575210b.jpg" alt="">
-           </div>
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x7702e2ba8da340346f9b2256075cd4a39f2.jpg" alt="">
-           </div>
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5327133/portrait/1920x77019df0ca6c2c6485b86287f7ec4a9f754.jpg" alt="">
-           </div>
-           <div>
-            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5281686/portrait/1920x7704af47d1e734948e381572ad1b52a4ecb4df6c4abb1824eac8df67df6ee440910.jpg" alt="">
-           </div>
-        </div>
+        <div id="container3">
+            <div>
+                <a href="./videos/taj_series.mp4"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-101-10z5335314/portrait/1920x77071db7ed9ed5a49218614044443067579.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/DUAouyG91io"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5326731/portrait/1920x770e1ed4c7a72a141b0bcbacde5ba689f78.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5327133/portrait/1920x770338bcf4774bd448eb33f4342be4ab1a4.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="./videos/valvi_series.mp4"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5310540/portrait/1920x770e56cf862be8f4c39a93277ffd575210b.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/yzTQ8y0dImQ"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5289752/portrait/1920x7706d2f66cc1d0444bfbb7cffc64ba14bb880ef3fd87c28444aa6610df68a6eb515.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/9ljbq9lM5GQ"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x7702e2ba8da340346f9b2256075cd4a39f2.jpg" alt=""></a>
+            </div>
+            
+          </div>
 
-        <h2>Trending Near You</h2>
+        <h2>Top 10 Movies in India</h2>
 
         <div class="slider">
             <div class="slides">
@@ -336,10 +393,94 @@
             <div class="arrow arrow-prev">&#10094;</div>
             <div class="arrow arrow-next">&#10095;</div>
           </div>
-          
-         <div class="video_container">
-             
+
+          <h2>Latest Hindi Episodes Free</h2>
+
+          <div id="latest">
+           <a href="https://youtu.be/m0BNmuPJ5g0"><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5331693/list/000001842f320c9217fc48089013270a2b33e909.jpg" alt="">
+            <h4>Kundali Bhagya</h4>
+            <h4>30 Mar</h4>
+          </div></a>
+            <a href="https://youtu.be/R-79zdw8u-o"><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5331837/list/00000143a31a8d17d83845e493b6b38b792ebb8e.jpg" alt="">
+              <h4>KumKum Bhagya</h4>
+              <h4>30 Mar</h4>
+            </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5331832/list/0000006751d92fcdf8ee4dae9c44542e6433787d.jpg" alt="">
+              <h4>Bhagya Laxmi</h4>
+              <h4>30 Mar</h4>
+            </div></a>
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5331600/list/00000120162e46f231084b549336b3c34e4c381e.jpg" alt="">
+            <h4>Meet</h4>
+            <h4>30 Mar</h4>
+          </div></a>
+            <a href="https://youtu.be/0-cqg31RGXY"><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5334810/list/000001983fe9c8ecba4c423b9fe282593d76e018.jpg" alt="">
+              <h4>Maitree</h4>
+              <h4>30 Mar</h4>
+            </div></a>
+          </div>
+
+          <h2 class="h">Latest Marathi Episodes Free</h2>
+
+          <div id="latest">
+           <a href="https://youtu.be/c7zJXb32vMo"><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5332951/list/000002036e90afe2d4fe46c2bf8574f34ba7744d.jpg" alt="">
+            <h4>Yashoda</h4>
+            <h4>31 Mar</h4>
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5333131/list/00000027f03395d119ce4464acc69b7bfa9981a6.jpg" alt="">
+              <h4>Hrudae Preet Jagate</h4>
+              <h4>31 Mar</h4>
+            </div></a>
+            <a href="https://youtu.be/K4HaE55rcrk"><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5332925/list/00000244422906e524964600a36704f8e16320c1.jpg" alt="">
+              <h4>Lavangi Mirchi</h4>
+              <h4>30 Mar</h4>
+            </div></a>
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5333026/list/0000024553457a83445243e8abfe154e9e30aecb.jpg" alt="">
+            <h4>Nava Gadi Nava Rajya</h4>
+            <h4>31 Mar</h4>
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5332997/list/000000339e0fd14d89634116a2a07d94ebd62c71.jpg" alt="">
+              <h4>36 Guni Jodi</h4>
+              <h4>30 Mar</h4>
+            </div></a>
+          </div>
+
+          <h2 class="h2">Top 10 Web Series in India</h2>
+
+         <div id="container1">
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/portrait/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5310540/portrait/1920x770e56cf862be8f4c39a93277ffd575210b.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x7702e2ba8da340346f9b2256075cd4a39f2.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5327133/portrait/1920x77019df0ca6c2c6485b86287f7ec4a9f754.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5281686/portrait/1920x7704af47d1e734948e381572ad1b52a4ecb4df6c4abb1824eac8df67df6ee440910.jpg" alt="">
+            </div>
          </div>
+
+         <h2>Explore In Your Language Marathi</h2>
+
+          <div id="latest">
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-8-3z5258169/list/teluguplatformlanguage1170x65823112022653f2fbb4e034f758f686e45668b99b9.jpg" alt="">
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-8-3z5258171/list/tamilplatformlanguage1170x65823112022b2e3147c0e17403f82252c73e96ceb65.jpg" alt="">
+            </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-8-7867/list/hindiplatformlanguage1170x65823112022fac03d5e92564c1fab35ec7fc4562219.jpg" alt="">
+            </div></a>
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-8-3z5258170/list/kannadaplatformlanguage1170x65823112022518dadc786404465ae31319ac3972bec.jpg" alt="">
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-8-3z5258059/list/bangla12f9480e9e6be463fa3e61e0aea058107.jpg" alt="">
+            </div></a>
+          </div>
     </div>
  </body>
 </html>
