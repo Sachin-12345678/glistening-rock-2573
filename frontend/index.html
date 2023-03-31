@@ -8,9 +8,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <style>
     /* ********header start********* */
+    body{
+        background-color: rgb(100, 90, 90);
+    }
     *{
         padding: 0;
         margin: 0;
@@ -55,7 +60,7 @@
       background-color: black;
     }
     .btn{
-      margin-left: -270px;
+      margin-left: -200px;
       padding: 11px;
       border-radius: 5px;
       border-color: white;
@@ -63,9 +68,10 @@
       color: white;
       font-weight: bold;
       background-color: black;
+      cursor: pointer;
     }
     .btn1{
-      margin-left: -200px;
+      margin-left: -130px;
       padding: 10px;
       width: 100px;
       border-radius: 5px;
@@ -85,8 +91,7 @@
     /* ************Home page start********** */
     #container{
         width: 100%;
-        height: 1000px;
-        border: 1px solid red;
+        height: auto;
         margin-top: 73px;
     }
     #container>div>img{
@@ -95,14 +100,146 @@
     .img1{
         margin: auto;
         width: 95%;
+        margin-top: 40px;
     }
     .img1>div>img{
         width: 100%;
         height: 320px;
     }
     h2{
-      margin-top: 25px;
+      margin-top: 30px;
+      margin-left: 32px;
+      font-size: 30px;
+      color: white;
     }
+
+    #menu{
+        font-size: 20px;
+        color: white;
+        margin-top: 35px;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    #sidenav{
+       padding: 100px 0px;
+       position: fixed;
+       width: 0px;
+       height: 60vh;
+       background-color:rgba(255,255,255,0.2);
+       backdrop-filter: blur(10px);
+       box-shadow:inset 10px 10px 10px grey;
+       top: 0; 
+       right: 0;
+       margin-top: 90px;
+    }
+
+    #sidenav ul li{
+        list-style: none;
+    }
+
+    #sidenav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        margin: 10px 10px;
+        display: block;
+        padding: 10px;
+    }
+
+    #sidenav ul li a:hover{
+        background: rgba(255,255,255,0.4);
+        transition: 0.4;
+    }
+    #sidenav>div{
+        margin-top: -100px;
+    }
+
+    #container1{
+        border: 1px solid red;
+        width: 95%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    #container1>div>img{
+        width: 100%;
+        border-radius: 10px;
+
+    }
+    #container1>div{
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    #container1>div:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+    }
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* overflow: hidden; */
+  margin-top: 30px;
+  
+}
+.slides {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.slide {
+  width: calc(100% / 3);
+  height: 100%;
+  cursor: pointer;
+}
+
+.slide:hover{
+    transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.arrow-prev {
+  left: 0;
+}
+.arrow-next {
+  right: 0;
+}
+
+
     
 </style>
 <body>
@@ -121,6 +258,22 @@
       <a href="./signup.html"><button class="btn">LOGIN</button></a>
 
       <a href=""><button class="btn1">BUY PLAN</button></a>
+
+      <i class="fa fa-bars" aria-hidden="true" id="menu"></i>
+      <section id="sidenav">
+        <div>
+            <ul>
+                <li><a href="#"><i class="fa fa-home">Home</i></a></li>
+                <li><a href="#"><i class="fa fa-home">By Plan</i></a></li>
+                <li><a href="#"><i class="fa fa-home">About Us</i></a></li>
+                <li><a href="#"><i class="fa fa-home">My NFT</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Help Center</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Term of use</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Privacy Policy</i></a></li>
+            </ul>
+        </div>
+      </section>
+
       </div>
       <br>
 
@@ -137,6 +290,104 @@
             </div>
         </div>
         <h2>Trending Near You</h2>
-        
-</body>
+
+        <div id="container1">
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/portrait/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt="">
+           </div>
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg" alt="">
+           </div>
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5310540/portrait/1920x770e56cf862be8f4c39a93277ffd575210b.jpg" alt="">
+           </div>
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x7702e2ba8da340346f9b2256075cd4a39f2.jpg" alt="">
+           </div>
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5327133/portrait/1920x77019df0ca6c2c6485b86287f7ec4a9f754.jpg" alt="">
+           </div>
+           <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5281686/portrait/1920x7704af47d1e734948e381572ad1b52a4ecb4df6c4abb1824eac8df67df6ee440910.jpg" alt="">
+           </div>
+        </div>
+
+        <h2>Trending Near You</h2>
+
+        <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5326731/portrait/1920x770e1ed4c7a72a141b0bcbacde5ba689f78.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323051/portrait/1920X7701bd09eb8fa0e405380788ec34c24ef6e606f27a17dd5499ca412f73af8e2e765.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5318993/portrait/1920x7707f79b672400b47f29292891bf2c80651de284427fcaa4437b9e54e896b393315.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5277822/portrait/1920x770c6300138e66e4caeb7bf3a4f9f02067b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5281750/portrait/1920x77092472069ec2140cb8045f4851d4c9c3c.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323147/portrait/1920x770d79df09a751242cda5aeaec20e6a1291ee6dc950c1cd49e6845c6e17cb33a64b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5327035/portrait/1920x770a175574207ef49e2a282e5e341cf829b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5330748/portrait/1920x7707a6ec6f5ec5b4f7d930167af73571714.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5281750/portrait/1920x77092472069ec2140cb8045f4851d4c9c3c.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323147/portrait/1920x770d79df09a751242cda5aeaec20e6a1291ee6dc950c1cd49e6845c6e17cb33a64b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg"></div>
+            </div>
+            <div class="arrow arrow-prev">&#10094;</div>
+            <div class="arrow arrow-next">&#10095;</div>
+          </div>
+          
+
+    </div>
+ </body>
 </html>
+
+<script>
+    var menu=document.getElementById("menu");
+    var sidenav=document.getElementById("sidenav");
+    sidenav.style.width="0px";
+    menu.onclick = function(){
+       if(sidenav.style.width=="0px"){
+         sidenav.style.width="250px";
+       }
+       else{
+        sidenav.style.width="0px";
+       }
+    }
+
+
+    const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const prev = document.querySelector('.arrow-prev');
+const next = document.querySelector('.arrow-next');
+
+let currentSlide = 1;
+let slideWidth = slide[0].clientWidth;
+
+slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+
+next.addEventListener('click', () => {
+  if (currentSlide >= slide.length - 1) return;
+  currentSlide++;
+  slides.style.transition = 'transform 0.5s ease';
+  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+});
+
+prev.addEventListener('click', () => {
+  if (currentSlide <= 0) return;
+  currentSlide--;
+  slides.style.transition = 'transform 0.5s ease';
+  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+});
+
+slides.addEventListener('transitionend', () => {
+  if (slide[currentSlide].classList.contains('last-clone')) {
+    slides.style.transition = 'none';
+    currentSlide = slide.length - 2;
+    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+  }
+  if (slide[currentSlide].classList.contains('first-clone')) {
+    slides.style.transition = 'none';
+    currentSlide = slide.length - currentSlide;
+    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+  }
+});
+
+
+</script>
