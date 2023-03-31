@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<style>
+    /* ********header start********* */
+    body{
+        background-color: rgb(100, 90, 90);
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #nav{
+        height: 90px;
+        width: 100%;
+        /* position: fixed; */
+        background-color: black;
+        display: flex;
+    }
+    #nav>a>img{
+        width: 100px;
+        border-radius: 5px;
+        height: 60px;
+        margin-top: -20px;
+        background-color: black;
+        margin-left: 15px;
+
+    }
+    #nav>a{
+       font-size: 18px; 
+       margin-top: 30px;
+       margin-left: 30px;
+       cursor: pointer;
+       color: white;
+       font-weight: 500;
+       text-decoration: none;
+    }
+    #nav>a:hover{
+        text-decoration: underline;
+    }
+    .in{
+      height: 36px;
+      width: 24%;
+      margin: auto;
+      margin-left: 90px;
+      border-radius: 5px;
+      border-color: white;
+      background-color: black;
+    }
+    .btn{
+      margin-left: -200px;
+      padding: 11px;
+      border-radius: 5px;
+      border-color: white;
+      margin-top: -5px;
+      color: white;
+      font-weight: bold;
+      background-color: black;
+      cursor: pointer;
+    }
+    .btn1{
+      margin-left: -130px;
+      padding: 10px;
+      width: 100px;
+      border-radius: 5px;
+      border-color: white;
+      margin-top: -5px;
+      background-color: #8230c6;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    .material-icons{
+        background-color: black;
+        color: white;
+    }
+    /* **********header end********** */
+
+    /* ************Home page start********** */
+    #container{
+        width: 100%;
+        height: auto;
+        margin-top: -17px;
+    }
+    #container>div>a>img{
+        width: 100%;
+    }
+    .img1{
+        margin: auto;
+        width: 95%;
+        margin-top: 40px;
+    }
+    .img1>div>img{
+        width: 100%;
+        height: 320px;
+    }
+    h2{
+      margin-top: 30px;
+      margin-left: 32px;
+      font-size: 25px;
+      color: white;
+    }
+
+    #menu{
+        font-size: 20px;
+        color: white;
+        margin-top: 35px;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    #sidenav{
+       padding: 100px 0px;
+       position: fixed;
+       width: 0px;
+       height: 60vh;
+       background-color:rgba(255,255,255,0.2);
+       backdrop-filter: blur(10px);
+       box-shadow:inset 10px 10px 10px grey;
+       top: 0; 
+       right: 0;
+       margin-top: 90px;
+    }
+
+    #sidenav ul li{
+        list-style: none;
+    }
+
+    #sidenav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        margin: 10px 10px;
+        display: block;
+        padding: 10px;
+    }
+
+    #sidenav ul li a:hover{
+        background: rgba(255,255,255,0.4);
+        transition: 0.4;
+    }
+    #sidenav>div{
+        margin-top: -100px;
+    }
+
+    #container1{
+        width: 95%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    #container1>div>img{
+        width: 100%;
+        border-radius: 10px;
+
+    }
+    #container1>div{
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    #container1>div:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+    }
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* overflow: hidden; */
+  margin-top: 30px;
+  
+}
+.slides {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.slide {
+  width: calc(100% / 3);
+  height: 100%;
+  cursor: pointer;
+}
+
+.slide:hover{
+    transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+        border-radius: 15px;
+
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.arrow-prev {
+  left: 0;
+}
+.arrow-next {
+  right: 0;
+}
+
+      #container3{
+            width: 95%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            gap: 22px;
+            margin-top: 30px;
+        }
+        #conatiner3>div{
+            width: 20%;
+            justify-content: space-between;
+            cursor: pointer;
+       }
+       #container3>div:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        border: 7px solid white;
+        border-radius: 15px;
+
+       }
+        #conatiner3>div>img{
+            width: 120%;
+            border-radius: 10px;
+        }
+
+        #latest{
+          width: 95%;
+          height: 150px;
+          margin: auto;
+          display: grid;
+          margin-top: 30px;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 15px;
+        }
+
+        #latest>a>div:hover{
+          transform: scale(1.1);
+          z-index: 1;
+          border: 7px solid white;
+          border-radius: 15px;
+        }
+      
+        #latest>a>div>img{
+          width: 100%;
+          height: 150px;
+        }
+
+        h4{
+          color: white;
+          font-size: 16px;
+          margin-top: 8px;
+          text-decoration: none;
+        }
+
+        .h{
+          margin-top: 90px;
+        }
+        .h2{
+          margin-top: 90px;
+        }
+
+    
+</style>
+<body>
+    <!-- *********header start********** -->
+    <div id="nav">
+      <a href=""><img src="./TV_Logo.png" alt=""></a>
+      <a href="">Home</a>
+      <a href="">TVShows</a>
+      <a href="">Movie</a>
+      <a href="">Sports</a>
+      <a href="">Premium</a>
+      <a href=""><i class="material-icons"></i></a>
+
+      <input class="in" type="text" placeholder="Search for Movies,Shows,Channels,etc..">
+
+      <a href="./signup.html"><button class="btn">LOGIN</button></a>
+
+      <a href=""><button class="btn1">BUY PLAN</button></a>
+
+      <i class="fa fa-bars" aria-hidden="true" id="menu"></i>
+      <section id="sidenav">
+        <div>
+            <ul>
+                <li><a href="#"><i class="fa fa-home">Home</i></a></li>
+                <li><a href="#"><i class="fa fa-home">By Plan</i></a></li>
+                <li><a href="#"><i class="fa fa-home">About Us</i></a></li>
+                <li><a href="#"><i class="fa fa-home">My NFT</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Help Center</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Term of use</i></a></li>
+                <li><a href="#"><i class="fa fa-home">Privacy Policy</i></a></li>
+            </ul>
+        </div>
+      </section>
+
+      </div>
+      <br>
+
+      <!-- ************header end********** -->
+     
+      <!-- *************Home page start************* -->
+     <div id="container">
+       <div>
+            <a href="https://youtu.be/NPeC5GnrhCw"><img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5326731/cover/1920x770e1ed4c7a72a141b0bcbacde5ba689f7808aabfb841c8472f86dcf35ce0857135.jpg" alt=""></a>
+        </div>
+        <div class="img1">
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1286,h_236,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/homefeed_launcher_sticker/1312x312a8da629731bf42a087e812e9f9176927.jpg" alt="">
+            </div>
+        </div>
+
+        <h2>ZEE5 Exclusive Movies</h2>
+
+        <div id="container3">
+            <div>
+                <a href="https://youtu.be/Urdv34WwXzQ"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5277822/portrait/1920x770c6300138e66e4caeb7bf3a4f9f02067b.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5310540/portrait/1920x770e56cf862be8f4c39a93277ffd575210b.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/cvMttgOhpbk"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5228525/portrait/1920x77069dfde7f955d4ef69e73c3b682aa636baf7e693843c94bca830df12a92375a8b.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/rxrWFhZFvMw"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5330748/portrait/1920x7707a6ec6f5ec5b4f7d930167af73571714.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/RK5NOo2QELM"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5227565/portrait/1920x7700f30f5b8f7304e008fe9804b2215f299.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/VVY3do673Zc"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-33204/portrait/1920x770eb95d00347474d48a4307809cedc50a0f79046ee222f44e7b981d97c611ce977.jpg" alt=""></a>
+            </div>
+            
+          </div>
+
+        <h2>Latest and Upcoming</h2>
+
+        <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5327035/portrait/1920x770a175574207ef49e2a282e5e341cf829b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5331177/portrait/1920x7708cf1b606bdc74813a8f86b0002465244.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323051/portrait/1920X7701bd09eb8fa0e405380788ec34c24ef6e523e7b2aff0043d6b93feaa4bb062dca.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5322929/portrait/1920x770558ce47c926b433283eeb6009b46e05e.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323147/portrait/1920x770d79df09a751242cda5aeaec20e6a1291ee6dc950c1cd49e6845c6e17cb33a64b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5327035/portrait/1920x770a175574207ef49e2a282e5e341cf829b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5330748/portrait/1920x7707a6ec6f5ec5b4f7d930167af73571714.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5281750/portrait/1920x77092472069ec2140cb8045f4851d4c9c3c.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5323147/portrait/1920x770d79df09a751242cda5aeaec20e6a1291ee6dc950c1cd49e6845c6e17cb33a64b.jpg"></div>
+              <div class="slide"><img src="https://akamaividz2.zee5.com/image/upload/w_231,h_347,c_scale,f_webp,q_auto:eco/resources/0-0-1z5299828/portrait/1920x77023958a1676e340ddb2cd592012f3c263.jpg"></div>
+            </div>
+            <div class="arrow arrow-prev">&#10094;</div>
+            <div class="arrow arrow-next">&#10095;</div>
+          </div>
+
+
+          <h2>Movies to Not Watch Alone</h2>
+
+        <div id="container3">
+            <div>
+                <a href="https://youtu.be/L-JlgcPidTc"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-8360/portrait/1920x77025533280d14f4f87a122eac645431ad4.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/MTjVnz8HBSE"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5285393/portrait/1920x770cfa04539221a4e8dbed7d4027a2c4c62.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-6966/portrait/1920x7705986bc7c7ee749f0803a9166be3829a8.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-365889/portrait/00365889incove261193221.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/-16MdQ9Blgk"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-111158/portrait/kaalikakarishma1920x770.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/z8WED2buyYk"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5259649/portrait/1920x770172a8130a0494149952c83cd51f2c783.jpg" alt=""></a>
+            </div>
+        </div>
+
+          <h2>Movie Marathon | 500+ Free Movies</h2>
+
+        <div id="container3">
+            <div>
+                <a href="https://youtu.be/d9PlHc_qVKw"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x7704fc363644f3b4fadab2aac3007f70e19.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51324/portrait/1920x7700a2599817c774b6ea8f5e3f84bc3b294.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/DfD7MzF4t-o"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2356/portrait/noentry1920x770copy676498d892a646a0912949783e774348.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5314903/portrait/1920x77083fa0548d0cb45e68771180130b4b953.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-275862/portrait/1920x7701375991374.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="https://youtu.be/LKNHVDPKy7g"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-155786/portrait/1920x7701887877095.jpg" alt=""></a>
+            </div>
+        </div>
+
+
+
+          <h2>Browse by Language</h2>
+
+          <div id="latest">
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/lang/english.jpg" alt="">
+            <h4>English</h4>
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/lang/hindi.jpg" alt="">
+              <h4>Hindi</h4>
+            </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/lang/marathi.jpg" alt="">
+              <h4>Marathi</h4>
+            </div></a>
+           <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bengali.jpg" alt="">
+            <h4>Bengali</h4>
+          </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bhojpuri.jpg" alt="">
+              <h4>Bhojpuri</h4>
+            </div></a>
+          </div>
+
+          <h2 class="h">Browse by Genre</h2>
+
+          <div id="latest">
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Action-genre.jpg" alt="">
+             <h4>Action</h4>
+           </div></a>
+             <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Adventure-genre.jpg" alt="">
+               <h4>Adventure</h4>
+             </div></a>
+             <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Thriller-genre.jpg" alt="">
+               <h4>Thriller</h4>
+             </div></a>
+            <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Romance-genre.jpg" alt="">
+             <h4>Romance</h4>
+           </div></a>
+             <a href=""><div><img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Comedy-genre.jpg" alt="">
+               <h4>Comedy</h4>
+             </div></a>
+           </div>
+
+          <h2 class="h2">South Dubbed Dhamaka</h2>
+
+         <div id="container1">
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5260479/portrait/1920x7708900b7a0280c4f659f696c004856b38c.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-348372/portrait/1920x7708b719aadb538429abc4dde7dea45032d.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5285393/portrait/1920x770cfa04539221a4e8dbed7d4027a2c4c62.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_1803765767/portrait/TimeStory1920x7702e3b15ada92d419d95ef0d15a7919a63.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-8142/portrait/008142cover587945931.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5117565/portrait/1920x7708e744fbdcb554e54a1036108a0832ebf.jpg" alt="">
+            </div>
+         </div>
+
+         <h2>Bollywood Favorites</h2>
+
+         <div id="container3">
+             <div>
+                 <a href="https://youtu.be/zkIfgcl0sG0"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_2008789836/portrait/1920x77013f6f0a24dbb4e9badb14eb2be629add.jpg" alt=""></a>
+             </div>
+             <div>
+                 <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-35166/portrait/1920x770a6695f542cf3419291a6bc299aa894f36beecab5698747888534bbbac6185936.jpg" alt=""></a>
+             </div>
+             <div>
+                 <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2519/portrait/1920x7705d840d88334948ab8a277c71f6810b0a.jpg" alt=""></a>
+             </div>
+             <div>
+                 <a href="https://youtu.be/nf39Jpi3ZQ4"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-96839/portrait/1920x77062fa79ad2a00435ca0ef053f6a476a74.jpg" alt=""></a>
+             </div>
+             <div>
+                 <a href=""><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-345651/portrait/1920x770cbb0423c13c84471a2562696cb55bd79.jpg" alt=""></a>
+             </div>
+             <div>
+                 <a href="https://youtu.be/38O33kYSpUM"><img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-gadarekpremkatha/portrait/gadar1920x77018190253351819025335263e1465e04c4e32ab4bb1137c568809a436f90f3b5d4f3182f6f26e0c879d62.jpg" alt=""></a>
+             </div>
+         </div>
+ 
+    </div>
+ </body>
+</html>
+
+<script>
+    var menu=document.getElementById("menu");
+    var sidenav=document.getElementById("sidenav");
+    sidenav.style.width="0px";
+    menu.onclick = function(){
+       if(sidenav.style.width=="0px"){
+         sidenav.style.width="250px";
+       }
+       else{
+        sidenav.style.width="0px";
+       }
+    }
+
+
+    const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const prev = document.querySelector('.arrow-prev');
+const next = document.querySelector('.arrow-next');
+
+let currentSlide = 1;
+let slideWidth = slide[0].clientWidth;
+
+slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+
+next.addEventListener('click', () => {
+  if (currentSlide >= slide.length - 1) return;
+  currentSlide++;
+  slides.style.transition = 'transform 0.5s ease';
+  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+});
+
+prev.addEventListener('click', () => {
+  if (currentSlide <= 0) return;
+  currentSlide--;
+  slides.style.transition = 'transform 0.5s ease';
+  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+});
+
+slides.addEventListener('transitionend', () => {
+  if (slide[currentSlide].classList.contains('last-clone')) {
+    slides.style.transition = 'none';
+    currentSlide = slide.length - 2;
+    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+  }
+  if (slide[currentSlide].classList.contains('first-clone')) {
+    slides.style.transition = 'none';
+    currentSlide = slide.length - currentSlide;
+    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+  }
+});
+
+
+</script>
