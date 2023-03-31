@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+</head>
+<style>
+    /* ********header start********* */
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #nav{
+        height: 90px;
+        width: 100%;
+        position: fixed;
+        border: 1px solid red;
+        background-color: black;
+        display: flex;
+    }
+    #nav>a>img{
+        width: 100px;
+        border-radius: 5px;
+        height: 60px;
+        margin-top: -20px;
+        background-color: black;
+        margin-left: 15px;
+
+    }
+    #nav>a{
+       font-size: 18px; 
+       margin-top: 30px;
+       margin-left: 30px;
+       cursor: pointer;
+       color: white;
+       font-weight: 500;
+       text-decoration: none;
+    }
+    #nav>a:hover{
+        text-decoration: underline;
+    }
+    .in{
+      height: 36px;
+      width: 24%;
+      margin: auto;
+      margin-left: 90px;
+      border-radius: 5px;
+      border-color: white;
+      background-color: black;
+    }
+    .btn{
+      margin-left: -270px;
+      padding: 11px;
+      border-radius: 5px;
+      border-color: white;
+      margin-top: -5px;
+      color: white;
+      font-weight: bold;
+      background-color: black;
+    }
+    .btn1{
+      margin-left: -200px;
+      padding: 10px;
+      width: 100px;
+      border-radius: 5px;
+      border-color: white;
+      margin-top: -5px;
+      background-color: #8230c6;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    .material-icons{
+        background-color: black;
+        color: white;
+    }
+    /* **********header end********** */
+
+    /* ************Home page start********** */
+    #container{
+        width: 100%;
+        height: 1000px;
+        border: 1px solid red;
+        margin-top: 73px;
+    }
+    #container>div>img{
+        width: 100%;
+    }
+    .img1{
+        margin: auto;
+        width: 95%;
+    }
+    .img1>div>img{
+        width: 100%;
+        height: 320px;
+    }
+    h2{
+      margin-top: 25px;
+    }
+    
+</style>
+<body>
+    <!-- *********header start********** -->
+    <div id="nav">
+      <a href=""><img src="./TV_Logo.png" alt=""></a>
+      <a href="">Home</a>
+      <a href="">TVShows</a>
+      <a href="">Movie</a>
+      <a href="">Sports</a>
+      <a href="">Premium</a>
+      <a href=""><i class="material-icons"></i></a>
+
+      <input class="in" type="text" placeholder="Search for Movies,Shows,Channels,etc..">
+
+      <a href="./signup.html"><button class="btn">LOGIN</button></a>
+
+      <a href=""><button class="btn1">BUY PLAN</button></a>
+      </div>
+      <br>
+
+      <!-- ************header end********** -->
+     
+      <!-- *************Home page start************* -->
+     <div id="container">
+       <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5311140/cover/1920x7702288c19af62b45bca7b65d8f277922cd.jpg" alt="">
+        </div>
+        <div class="img1">
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1286,h_236,c_scale,f_webp,q_auto:eco/resources/0-101-10z5314666/homefeed_launcher_sticker/leveragingongoingcableissuein1312x3122832023d115420a54d749ea99f5cc37a6bfb34a.jpg" alt="">
+            </div>
+        </div>
+        <h2>Trending Near You</h2>
+        
+</body>
+</html>
