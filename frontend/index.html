@@ -10,310 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
-<style>
-    /* ********header start********* */
-    body{
-        background-color: rgb(100, 90, 90);
-    }
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    #nav{
-        height: 90px;
-        width: 100%;
-        /* position: fixed; */
-        background-color: black;
-        display: flex;
-    }
-    #nav>a>img{
-        width: 100px;
-        border-radius: 5px;
-        height: 60px;
-        margin-top: -20px;
-        background-color: black;
-        margin-left: 15px;
-
-    }
-    #nav>a{
-       font-size: 18px; 
-       margin-top: 30px;
-       margin-left: 30px;
-       cursor: pointer;
-       color: white;
-       font-weight: 500;
-       text-decoration: none;
-    }
-    #nav>a:hover{
-        text-decoration: underline;
-    }
-    .in{
-      height: 36px;
-      width: 24%;
-      margin: auto;
-      margin-left: 90px;
-      border-radius: 5px;
-      border-color: white;
-      background-color: black;
-    }
-    .btn{
-      margin-left: -200px;
-      padding: 11px;
-      border-radius: 5px;
-      border-color: white;
-      margin-top: -5px;
-      color: white;
-      font-weight: bold;
-      background-color: black;
-      cursor: pointer;
-    }
-    .btn1{
-      margin-left: -130px;
-      padding: 10px;
-      width: 100px;
-      border-radius: 5px;
-      border-color: white;
-      margin-top: -5px;
-      background-color: #8230c6;
-      cursor: pointer;
-      color: white;
-      font-weight: bold;
-    }
-    .material-icons{
-        background-color: black;
-        color: white;
-    }
-    /* **********header end********** */
-
-    /* ************Home page start********** */
-    #container{
-        width: 100%;
-        height: auto;
-        margin-top: -17px;
-    }
-    #container>div>a>img{
-        width: 100%;
-    }
-    .img1{
-        margin: auto;
-        width: 95%;
-        margin-top: 40px;
-    }
-    .img1>div>img{
-        width: 100%;
-        height: 320px;
-    }
-    h2{
-      margin-top: 30px;
-      margin-left: 32px;
-      font-size: 25px;
-      color: white;
-    }
-
-    #menu{
-        font-size: 20px;
-        color: white;
-        margin-top: 35px;
-        margin-right: 25px;
-        cursor: pointer;
-    }
-
-    #sidenav{
-       padding: 100px 0px;
-       position: fixed;
-       width: 0px;
-       height: 60vh;
-       background-color:rgba(255,255,255,0.2);
-       backdrop-filter: blur(10px);
-       box-shadow:inset 10px 10px 10px grey;
-       top: 0; 
-       right: 0;
-       margin-top: 90px;
-    }
-
-    #sidenav ul li{
-        list-style: none;
-    }
-
-    #sidenav ul li a{
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        margin: 10px 10px;
-        display: block;
-        padding: 10px;
-    }
-
-    #sidenav ul li a:hover{
-        background: rgba(255,255,255,0.4);
-        transition: 0.4;
-    }
-    #sidenav>div{
-        margin-top: -100px;
-    }
-
-    #container1{
-        width: 95%;
-        height: auto;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-    }
-    #container1>div>img{
-        width: 100%;
-        border-radius: 10px;
-
-    }
-    #container1>div{
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    #container1>div:hover{
-        transform: scale(1.1);
-        z-index: 1;
-        border: 7px solid white;
-    }
-
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  /* overflow: hidden; */
-  margin-top: 30px;
-  
-}
-.slides {
-  display: flex;
-  width: 200%;
-  height: 100%;
-  transition: transform 0.5s ease;
-  gap: 20px;
-}
-
-.slide {
-  width: calc(100% / 3);
-  height: 100%;
-  cursor: pointer;
-}
-
-.slide:hover{
-    transform: scale(1.1);
-        z-index: 1;
-        border: 7px solid white;
-        border-radius: 15px;
-
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-
-}
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  line-height: 50px;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.arrow:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.arrow-prev {
-  left: 0;
-}
-.arrow-next {
-  right: 0;
-}
-
-      #container3{
-            width: 95%;
-            height: auto;
-            margin: auto;
-            display: flex;
-            gap: 22px;
-            margin-top: 30px;
-        }
-        #conatiner3>div{
-            width: 20%;
-            justify-content: space-between;
-            cursor: pointer;
-       }
-       #container3>div:hover{
-        transform: scale(1.1);
-        z-index: 1;
-        border: 7px solid white;
-        border-radius: 15px;
-
-       }
-        #conatiner3>div>img{
-            width: 120%;
-            border-radius: 10px;
-        }
-
-        #latest{
-          width: 95%;
-          height: 150px;
-          margin: auto;
-          display: grid;
-          margin-top: 30px;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 15px;
-        }
-
-        #latest>a>div:hover{
-          transform: scale(1.1);
-          z-index: 1;
-          border: 7px solid white;
-          border-radius: 15px;
-        }
-      
-        #latest>a>div>img{
-          width: 100%;
-          height: 150px;
-        }
-
-        h4{
-          color: white;
-          font-size: 16px;
-          margin-top: 8px;
-          text-decoration: none;
-        }
-
-        .h{
-          margin-top: 90px;
-        }
-        .h2{
-          margin-top: 90px;
-        }
-
-    
-</style>
 <body>
     <!-- *********header start********** -->
     <div id="nav">
       <a href=""><img src="./TV_Logo.png" alt=""></a>
       <a href="">Home</a>
       <a href="">TVShows</a>
-      <a href="">Movie</a>
+      <a href="movies.html">Movie</a>
       <a href="">Sports</a>
       <a href="">Premium</a>
       <a href=""><i class="material-icons"></i></a>
 
-      <input class="in" type="text" placeholder="Search for Movies,Shows,Channels,etc..">
+      <!-- <input class="in" type="text" placeholder="Search for Movies,Shows,Channels,etc.."> -->
+
+      <div class="search" style="display: flex;">
+        <div><input type="text" placeholder="Search for Movies,Shows,Channels,etc.." ></div>
+        <div><i  class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
 
       <a href="./signup.html"><button class="btn">LOGIN</button></a>
 
@@ -323,21 +38,19 @@
       <section id="sidenav">
         <div>
             <ul>
-                <li><a href="#"><i class="fa fa-home">Home</i></a></li>
+                <li><a href="index.html"><i class="fa fa-home">Home</i></a></li>
                 <li><a href="#"><i class="fa fa-home">By Plan</i></a></li>
-                <li><a href="#"><i class="fa fa-home">About Us</i></a></li>
+                <li><a href="about.html"><i class="fa fa-home">About Us</i></a></li>
                 <li><a href="#"><i class="fa fa-home">My NFT</i></a></li>
                 <li><a href="#"><i class="fa fa-home">Help Center</i></a></li>
-                <li><a href="#"><i class="fa fa-home">Term of use</i></a></li>
+                <li><a href="./term.html"><i class="fa fa-home">Term of use</i></a></li>
                 <li><a href="#"><i class="fa fa-home">Privacy Policy</i></a></li>
             </ul>
         </div>
       </section>
-
-      </div>
+  </div>
       <br>
-
-      <!-- ************header end********** -->
+<!-- ************header end********** -->
      
       <!-- *************Home page start************* -->
      <div id="container">
@@ -482,59 +195,175 @@
             </div></a>
           </div>
     </div>
+    <!-- ***********home page end***************** -->
+
+    <hr class="line">
+
+    <!-- *********footer start********** -->
+    <div class="footer">
+      <div class="first-col">
+          <ul class="apps">
+              <li class="li1">Download Apps</li>
+              <li>
+                  <a href="https://play.google.com/store/apps/details?id=com.graymatrix.did">
+                      <img class="google-store"
+                      src="https://blog.urbancompany.com/wp-content/uploads/2022/09/download-1-1.png" alt="">
+                  </a>
+              </li>
+              <li>
+                  <a href="https://apps.apple.com/in/app/zee5-shows-live-tv-movies/id743691886">
+                      <img class="apple-store"
+                      src="https://www.zee5.com/images/app_store.png?ver=2.52.66" alt="">
+                  </a>
+              </li>
+          </ul>
+          <ul class="social-media">
+              <li class="li-text">Connect with us</li>
+             <a href="https://www.facebook.com/ZEE5/">
+              <li class="faceb">
+                  <i class="fa-brands fa-facebook face"></i>
+                </li>
+             </a>
+             <a href="https://www.instagram.com/zee5/">
+              <li class="inst">
+                  <i class="fa-brands fa-instagram insta"></i>
+              </li>
+             </a>
+             <a href="https://twitter.com/zee5india">
+              <li class="twite">
+                  <i class="fa-brands fa-twitter twit"></i>
+              </li>
+             </a>
+             <a href="https://www.youtube.com/channel/UCXOgAl4w-FQero1ERbGHpXQ">
+              <li class="youtu">
+                  <i class="fa-brands fa-youtube yout"></i>
+              </li>
+             </a>
+          </ul>
+      </div>
+      <ul class="info">
+          <li class="about"><a href="https://www.zee5.com/aboutus"> About Us</a></li>
+          <li>|</li>
+          <li class="help"><a href="https://helpcenter.zee5.com/portal/en/home">Help Center</a></li>
+          <li>|</li>
+          <li class="privacy"><a href="https://www.zee5.com/privacypolicy">Privacy Policy</a></li>
+          <li>|</li>
+          <li class="tc"><a href="https://www.zee5.com/termsofuse">Terms of Use</a></li>
+      </ul>
+      <div class="third-step">
+          <div><h3>Popular TV Shows</h3>
+              <a href="">
+                  <p>Kumkum Bhagya</p>
+              </a>
+              <a href="">
+                  <p>Kundali Bhagya</p>
+              </a>
+              <a href="">
+                  <p>Bhagya Lakshmi</p>
+              </a>
+              <a href="">
+                  <p>Meet</p>
+              </a>
+             <a href="">
+              <p>Annapoorna</p>
+             </a>
+             <a href="">
+                <p>Indira</p>
+               </a>
+          </div>
+          <div><h3>Premium Movies</h3>
+              <a href="">
+                  <p>RRR</p>
+              </a>
+              <a href="">
+                  <p>Uunchai</p>
+              </a>
+              <a href="">
+                  <p>Uri:The Surgical Strike</p>
+              </a>
+              <a href="">
+                  <p>Dial 100</p>
+              </a>
+             <a href="">
+              <p>Helmet</p>
+             </a>
+          </div>
+          <div><h3>Popular LIVE TV Channels</h3>
+              <a href="">
+                  <p>Aj Tak</p>
+              </a>
+              <a href="">
+                  <p>Zee News</p>
+              </a>
+              <a href="">
+                  <p>Zee TV HD</p>
+              </a>
+              <a href="">
+                  <p>&TV HD</p>
+              </a>
+              <a href="">
+                  <p>Zee Marathi HD</p>
+              </a>
+          </div>
+          <div><h3>Popular Web Series</h3>
+              <a href="">
+                  <p>Taj</p>
+              </a>
+              <a href="">
+                  <p>Sunflower</p>
+              </a>
+              <a href="">
+                  <p>Tripling</p>
+              </a>
+              <a href="">
+                  <p>Pitchers</p>
+              </a>
+              <a href="">
+                  <p>Naxalbari</p>
+              </a>
+              <a href="">
+                  <p>Anantham</p>
+              </a>
+              <a href="">
+                <p>Gaalivana</p>
+            </a>
+          </div>
+          <div><h3>Bollywood Top Celebrities</h3>
+              <a href="">
+                  <p>Sunny Leone</p>
+              </a>
+              <a href="">
+                  <p>Disha Patani </p>
+              </a>
+              <a href="">
+                  <p>Deepika Padukone</p>
+              </a>
+              <a href="">
+                  <p>Salman Khan</p>
+              </a>
+              <a href="">
+                  <p>Nora Fatehi</p>
+              </a>
+          </div>
+          <div><h3>Games & News</h3>
+              <a href="">
+                  <p>Play</p>
+              </a>
+              <a href="">
+                  <p>Stories </p>
+              </a>
+              <a href="">
+                  <p>Articles</p>
+              </a>
+          </div>
+      </div>
+      <div class="last-col">
+          <p>Best Viewed on Google Chrome 80+, Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+</p>
+          <p>Copyright @ 2022 Zee Entertainment Enterpeises Ltd. All rights reserved.</p>
+      </div>
+     </div>
+ <!-- **************footer end here************** -->
  </body>
 </html>
 
-<script>
-    var menu=document.getElementById("menu");
-    var sidenav=document.getElementById("sidenav");
-    sidenav.style.width="0px";
-    menu.onclick = function(){
-       if(sidenav.style.width=="0px"){
-         sidenav.style.width="250px";
-       }
-       else{
-        sidenav.style.width="0px";
-       }
-    }
-
-
-    const slides = document.querySelector('.slides');
-const slide = document.querySelectorAll('.slide');
-const prev = document.querySelector('.arrow-prev');
-const next = document.querySelector('.arrow-next');
-
-let currentSlide = 1;
-let slideWidth = slide[0].clientWidth;
-
-slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
-
-next.addEventListener('click', () => {
-  if (currentSlide >= slide.length - 1) return;
-  currentSlide++;
-  slides.style.transition = 'transform 0.5s ease';
-  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
-});
-
-prev.addEventListener('click', () => {
-  if (currentSlide <= 0) return;
-  currentSlide--;
-  slides.style.transition = 'transform 0.5s ease';
-  slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
-});
-
-slides.addEventListener('transitionend', () => {
-  if (slide[currentSlide].classList.contains('last-clone')) {
-    slides.style.transition = 'none';
-    currentSlide = slide.length - 2;
-    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
-  }
-  if (slide[currentSlide].classList.contains('first-clone')) {
-    slides.style.transition = 'none';
-    currentSlide = slide.length - currentSlide;
-    slides.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
-  }
-});
-
-
-</script>
+<script src="./index.js"></script>

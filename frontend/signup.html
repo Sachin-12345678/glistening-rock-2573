@@ -7,7 +7,8 @@
     <title>SIGNUP</title>
     <style>
         body{
-            background-color: darkslategrey;
+            /* background-color: darkslategrey; */
+            background-color: rgb(17, 14, 14);
         }
         #container{
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -86,9 +87,9 @@
     <div id="container">
         <h1>Create a new account</h1>
         <p>Create an account to continue enjoying uninterrupted video and personalised experience</p>
-        <input type="text" id="email" placeholder="Enter your email...">
+        <input type="text" id="email" placeholder="Enter your email..."required>
         <br>
-        <input type="password" id="pass" placeholder="password...">
+        <input type="password" id="pass" placeholder="password..."required>
         <br>
         <button onclick="onSignup()">Create account</button>
         <hr>
@@ -123,7 +124,23 @@
             },
             body: JSON.stringify(payload)
         }).then(res=>res.json())
-        .then(res=>alert("Signup Successfull"))
+        .then(res=>console.log(res))
         .then(err=>console.log(err))
+        // if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
+        //     alert("Signup Successfull")
+        // }else{
+        //     alert("Enter email and passaword")
+        // }
+
+        if(document.getElementById("email").value!=""){
+            alert("Enter passaword")
+        }else if(document.getElementById("pass").value!=""){
+            alert("Enter email")
+        }
+        else if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
+            alert("Signup Successfull")
+        }else{
+            alert("Enter email and passaword") 
+        }
     }
 </script>
