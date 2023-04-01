@@ -8,8 +8,9 @@
 </head>
 <style>
      body{
-            background-color: darkslategrey;
-        }
+            /* background-color: darkslategrey; */
+             background-color: rgb(17, 14, 14);
+       }
      #container{
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           border: 1px solid white;
@@ -95,10 +96,10 @@
         <h2>Login Account With</h2>
         <div class="box">
             <div>
-                <a href="https://loginservice.thehut.net/facebook?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Facebook</a>
+                <a href="https://loginservice.thehut.net/facebook?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.zee5.com/socialAuthentication.account">Facebook</a>
             </div>
             <div>
-                <a href="https://loginservice.thehut.net/google?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.skinstore.com/socialAuthentication.account">Google</a>
+                <a href="https://loginservice.thehut.net/google?site=121&subsite=us&shield=true&clientState=eyJyZXR1cm5UbyI6Imh0dHBzJTNBJTJGJTJGd3d3LnNraW5zdG9yZS5jb20lMkZhY2NvdW50SG9tZS5hY2NvdW50In0=&returnUrl=https://www.zee5.com/socialAuthentication.account">Google</a>
 
                 <!-- <img src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=3.4.5" alt="Google"> -->
             </div>
@@ -125,9 +126,16 @@
         }).then(res=>res.json())
         .then(res=>{
             if(res.msg=="Logged in"){
-                alert("Login Successfull")
-                window.location.href="index.html"
-            }
+                // alert("Login Successfull")
+                if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
+            alert("Login Successfull") 
+            window.location.href="index.html"
+        }
+        else{
+            alert("Enter email and passaword")
+        }
+
+     }
             else{
                 alert("Login Failed")
             }
@@ -137,6 +145,7 @@
         })
         .then(err=>console.log(err))
         // .then(err=>alert("Login Failed"))
+        
 
     }
 </script>
