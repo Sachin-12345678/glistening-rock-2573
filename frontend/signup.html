@@ -126,21 +126,11 @@
         }).then(res=>res.json())
         .then(res=>console.log(res))
         .then(err=>console.log(err))
-        // if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
-        //     alert("Signup Successfull")
-        // }else{
-        //     alert("Enter email and passaword")
-        // }
-
-        if(document.getElementById("email").value!=""){
-            alert("Enter passaword")
-        }else if(document.getElementById("pass").value!=""){
-            alert("Enter email")
-        }
-        else if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
+        if(document.getElementById("email").value!="" && document.getElementById("pass").value!=""){
             alert("Signup Successfull")
         }else{
-            alert("Enter email and passaword") 
+            alert("Enter email and passaword")
         }
+    
     }
 </script>
